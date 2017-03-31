@@ -7,18 +7,10 @@ public class Conversor {
 	private double millas;
 	private double kilometros;
 
-	// ********************************************************
-	// ** Acciones
-	// ********************************************************
-	
 	public void convertir() {
 		this.kilometros = this.millas * 1.60934;
 	}
 	
-	// ********************************************************
-	// ** Atributos
-	// ********************************************************
-
 	public double getMillas() {
 		return this.millas;
 	}
