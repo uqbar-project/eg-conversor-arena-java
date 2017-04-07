@@ -1,19 +1,19 @@
 package org.uqbar.arena.examples.conversor;
 
+import org.uqbar.commons.model.ObservableUtils;
 import org.uqbar.commons.utils.Observable;
 
 @Observable
 public class ConversorViewModel {
   private double millas;
-  
-  private String textoKilometros;
-  private String textoMillas;
+  private double kilometros;
   
   private Conversor conversor = new Conversor();
   
   public void convertir() {
-    textoKilometros = "Kms: " + conversor.convertir(millas);
-    textoMillas = "Millas: " + millas;
+    kilometros = conversor.convertir(millas);
+    ObservableUtils.firePropertyChanged(this, "textoMillas");
+    ObservableUtils.firePropertyChanged(this, "textoKilometros");
   }
 
   public double getMillas() {
@@ -25,21 +25,13 @@ public class ConversorViewModel {
   }
 
   public String getTextoKilometros() {
-    return textoKilometros;
+    return "Kms: " + kilometros;
   }
 
-  public void setTextoKilometros(String textoKilometros) {
-    this.textoKilometros = textoKilometros;
-  }
 
   public String getTextoMillas() {
-    return textoMillas;
+    return "Millas: " + millas;
   }
-
-  public void setTextoMillas(String textoMillas) {
-    this.textoMillas = textoMillas;
-  }
-  
   
   
 }

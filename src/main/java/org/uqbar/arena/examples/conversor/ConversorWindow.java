@@ -42,7 +42,9 @@ public class ConversorWindow extends MainWindow<ConversorViewModel> {
 			.setCaption("Convertir a kilómetros")
 			.onClick(() -> this.getModelObject().convertir());
 		
-		
+		new Label(mainPanel) //
+		  .bindValueToProperty("textoMillas");
+  
 		new Label(mainPanel) //
 			.bindValueToProperty("textoMillas");
 		
