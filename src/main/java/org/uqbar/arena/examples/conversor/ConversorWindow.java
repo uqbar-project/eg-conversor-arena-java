@@ -38,11 +38,6 @@ public class ConversorWindow extends MainWindow<ConversorViewModel> {
 		new NumericField(mainPanel)
 		  .bindValueToProperty("millas");
 
-		new Button(mainPanel)
-			.setCaption("Convertir a kilómetros")
-			.onClick(() -> this.getModelObject().convertir());
-		
-		
 		new Label(mainPanel) //
 			.bindValueToProperty("textoMillas");
 		
