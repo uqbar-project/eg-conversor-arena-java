@@ -1,9 +1,11 @@
 package org.uqbar.arena.examples.conversor;
 
-import org.uqbar.commons.utils.Observable;
+import org.uqbar.commons.model.annotations.Observable;
 
 @Observable
 public class Conversor {
+	public static double FACTOR_CONVERSION = 1.60934;
+	
 	private double millas;
 	private double kilometros;
 
@@ -12,7 +14,7 @@ public class Conversor {
 	// ********************************************************
 	
 	public void convertir() {
-		this.kilometros = this.millas * 1.60934;
+		this.kilometros = this.millas * FACTOR_CONVERSION;
 	}
 	
 	// ********************************************************
